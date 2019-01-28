@@ -1,7 +1,9 @@
 # new_relic_insights_sender
 Simple CLI tool for sending custom events to New Relic Insights
 
-Pipe output of command(s) or just echo text to create an event in Insights
+Pipe output of command(s) or just echo text to create an event in Insights.
+
+Run it on a schedule and create a dashboard and/or alert in New Relic.
 
 
 ## Example usage
@@ -11,6 +13,8 @@ Count the number of errors and send an event to New Relic Insights
     grep error yourapp.log | wc -l | ./nr_insights_sender   # by default uses the `value` key
     
     grep error yourapp.log | wc -l | ./nr_insights_sender errorCount  # specify a your own key to send the data as
+    
+    
     
 Will appear in your new relic insights as
 
